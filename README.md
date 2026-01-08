@@ -1,58 +1,84 @@
-# Mansoor Shokal | Data Scientist & AI Engineer
+<p align="center">
+  <img src="public/images/profile-photo.png" alt="Mansoor Shokal" width="150" style="border-radius: 50%;" />
+</p>
 
-![Mansoor Shokal](/public/images/profile-photo.png)
+<h1 align="center">Mansoor Shokal</h1>
+<p align="center">
+  <strong>Data Scientist | AI Engineer | Full-Stack Developer</strong>
+</p>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/mansoorshokal"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://github.com/mh2des"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+</p>
+
+---
 
 > **Bridging the gap between complex algorithms and intuitive user experiences.**
 
-This portfolio showcases my expertise in **Data Science**, **AI Engineering**, and **Full-Stack Development**. It is built with a focus on modern aesthetics, performance, and accessibility.
+This repository contains the source code for my personal portfolio website, showcasing my expertise in **Data Science**, **AI/ML Engineering**, and **Full-Stack Development**.
 
-## 🚀 Key Features
+---
 
--   **3D Hero Section**: Immersive first impression powered by `Three.js` / `React Three Fiber`.
--   **Dynamic Background**: Custom particle starfield animation that simulates depth and motion using `framer-motion`.
--   **AI-Powered Style**: A futuristic, "glowing" design language that reflects my focus on Artificial Intelligence and Machine Learning.
--   **Responsive Design**: Fully optimized for all devices, from mobile phones to large desktop screens.
--   **Modern Tech Stack**: Built with the latest industry-standard tools for speed and scalability.
+## ✨ Key Features
+
+| Feature | Description |
+|---------|-------------|
+| **3D Hero Section** | Immersive, interactive hero powered by Three.js and React Three Fiber. |
+| **Dynamic Starfield** | Custom particle animation using Framer Motion for a premium aesthetic. |
+| **Responsive Design** | Optimized for all devices, from mobile to 4K displays. |
+| **High Performance** | Built with Next.js 14 App Router for speed and SEO. |
+| **Accessibility** | Follows WCAG guidelines for inclusive design. |
+
+---
 
 ## 🛠️ Tech Stack
 
-### AI & Data Science
--   **Languages**: Python, SQL
--   **Frameworks**: TensorFlow, PyTorch, Scikit-learn
--   **Domains**: NLP, Computer Vision, Predictive Analytics
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
+</p>
 
-### Web Development
--   **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
--   **Language**: [TypeScript](https://www.typescriptlang.org/)
--   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
--   **Animations**: [Framer Motion](https://www.framer.com/motion/)
+---
 
-### Mobile
--   **Framework**: Flutter
--   **Platform**: iOS & Android
+## � Getting Started
 
-## 💻 Getting Started
+```bash
+# 1. Clone the repository
+git clone https://github.com/mh2des/My-portfolio-.git
 
-To run this project locally:
+# 2. Navigate to the project directory
+cd My-portfolio-
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/your-username/portfolio.git
-    cd portfolio
-    ```
+# 3. Install dependencies
+npm install
 
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
+# 4. Start the development server
+npm run dev
+```
 
-3.  **Run the development server:**
-    ```bash
-    npm run dev
-    ```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-4.  **Open in browser:**
-    Navigate to [http://localhost:3000](http://localhost:3000)
+---
+
+## 📁 Project Structure
+
+```
+├── public/             # Static assets (images, CV, icons)
+├── src/
+│   ├── app/            # Next.js App Router pages
+│   ├── components/     # Reusable UI components
+│   └── lib/            # Utilities and data (projects, etc.)
+├── tests/              # Playwright E2E tests
+└── ...config files
+```
+
+---
 
 ## 📄 License
 
