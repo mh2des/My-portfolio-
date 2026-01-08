@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mansoor Shokal | Data Scientist & AI Engineer
 
-## Getting Started
+![Mansoor Shokal](/public/images/profile-photo.png)
 
-First, run the development server:
+> **Bridging the gap between complex algorithms and intuitive user experiences.**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This portfolio showcases my expertise in **Data Science**, **AI Engineering**, and **Full-Stack Development**. It is built with a focus on modern aesthetics, performance, and accessibility.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-   **3D Hero Section**: Immersive first impression powered by `Three.js` / `React Three Fiber`.
+-   **Dynamic Background**: Custom particle starfield animation that simulates depth and motion using `framer-motion`.
+-   **AI-Powered Style**: A futuristic, "glowing" design language that reflects my focus on Artificial Intelligence and Machine Learning.
+-   **Responsive Design**: Fully optimized for all devices, from mobile phones to large desktop screens.
+-   **Modern Tech Stack**: Built with the latest industry-standard tools for speed and scalability.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+### AI & Data Science
+-   **Languages**: Python, SQL
+-   **Frameworks**: TensorFlow, PyTorch, Scikit-learn
+-   **Domains**: NLP, Computer Vision, Predictive Analytics
 
-To learn more about Next.js, take a look at the following resources:
+### Web Development
+-   **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+-   **Language**: [TypeScript](https://www.typescriptlang.org/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **Animations**: [Framer Motion](https://www.framer.com/motion/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Mobile
+-   **Framework**: Flutter
+-   **Platform**: iOS & Android
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 💻 Getting Started
 
-## Deploy on Vercel
+To run this project locally:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/portfolio.git
+    cd portfolio
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open in browser:**
+    Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📄 License
+
+© 2026 Mansoor Shokal. All rights reserved.
