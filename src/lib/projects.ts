@@ -23,7 +23,7 @@ export const projects: Project[] = [
         title: "Irab - Arabic Grammar App",
         description:
             "AI-powered Arabic grammar app for grammatical parsing, lexicon analysis, and learning modules. Published on Google Play with 700+ downloads and 5-star rating in the first month.",
-        categories: ["Mobile App", "AI System"],
+        categories: ["Mobile App", "AI & Deep Learning Systems"],
         stack: ["Flutter", "Firebase", "OCR", "Gemini API", "Groq"],
         metrics: "700+ downloads",
         image: "/images/projects/irab/app_icon.png",
@@ -37,11 +37,29 @@ export const projects: Project[] = [
         featured: true,
     },
     {
+        slug: "sentiment-ai",
+        title: "SentimentAI - NLP Analytics",
+        description:
+            "A stunning web application for analyzing customer sentiment in mobile phone reviews using advanced NLP and Machine Learning techniques. Compares iPhone 15 vs Galaxy S24 using multiple ML models.",
+        categories: ["AI & Deep Learning Systems", "Web App"],
+        stack: ["Python", "FastAPI", "Scikit-learn", "NLTK", "Gensim"],
+        metrics: "Multi-Model NLP",
+        image: "/images/projects/sentiment-ai/cover nlp.png",
+        gallery: [
+            "/images/projects/sentiment-ai/Screenshot 2026-01-13 235826.png",
+            "/images/projects/sentiment-ai/Screenshot 2026-01-13 235842.png",
+            "/images/projects/sentiment-ai/Screenshot 2026-01-13 235901.png",
+        ],
+        liveUrl: "https://nlp-project-sentimentai.vercel.app/",
+        githubUrl: "https://github.com/mh2des/Sentiment-AI-NLP-",
+        featured: true,
+    },
+    {
         slug: "sermon-translation",
         title: "Real-Time Sermon Translation",
         description:
             "Real-time subtitle synchronization for live sermons with human-in-the-loop verification workflow. Optimized inference speed and multi-client WebSocket delivery.",
-        categories: ["AI System", "Web Platform"],
+        categories: ["AI & Deep Learning Systems", "Web Platform"],
         stack: ["FastAPI", "Faster-Whisper", "WebSockets", "PostgreSQL"],
         metrics: "Real-time",
         image: "/images/projects/sermon-translation/Screenshot 2026-01-05 190326.png",
@@ -106,7 +124,7 @@ export const projects: Project[] = [
         title: "Handwritten Digit Recognition",
         description:
             "Custom digit recognition system (01–70 classes) using transfer learning and dataset-specific preprocessing. Achieved 82.86% accuracy using 35-patch ensemble voting.",
-        categories: ["Deep Learning"],
+        categories: ["AI & Deep Learning Systems"],
         stack: ["TensorFlow", "MobileNetV2", "OpenCV", "CLAHE"],
         metrics: "82.86% accuracy",
         image: "/images/projects/digit-recognition/cover.png",

@@ -76,7 +76,7 @@ export function ProjectCard({ project, index = 0, className }: ProjectCardProps)
                     {/* Metrics badge */}
                     {project.metrics && (
                         <div className="absolute bottom-4 left-4">
-                            <span className="px-3 py-1.5 text-xs font-bold bg-primary/90 text-background rounded-full shadow-lg">
+                            <span className="px-3 py-1.5 text-xs font-bold bg-black/60 backdrop-blur-md border border-white/10 text-white rounded-full shadow-lg">
                                 {project.metrics}
                             </span>
                         </div>
