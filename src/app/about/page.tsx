@@ -97,7 +97,7 @@ export default function AboutPage() {
                             <div className="absolute bottom-6 left-6 right-6">
                                 <div className="flex items-center gap-2 text-white/90 text-sm font-medium bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full w-fit">
                                     <MapPin size={14} className="text-primary" />
-                                    <span>Remote / Worldwide</span>
+                                    <span>Available for Work</span>
                                 </div>
                             </div>
                         </motion.div>

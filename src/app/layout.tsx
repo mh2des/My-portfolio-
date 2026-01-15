@@ -66,7 +66,6 @@ export default function RootLayout({
         className={`${fontDisplay.variable} ${fontBody.variable} antialiased selection:bg-cyan-500/30 selection:text-cyan-200 bg-background text-foreground overflow-x-hidden`}
       >
         <LenisProvider>
-          <SpotlightCursor />
           <Header />
           <main className="min-h-screen relative">{children}</main>
           <Footer />
