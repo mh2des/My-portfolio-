@@ -65,7 +65,7 @@ Key technical decisions:
         title: "Irab",
         description:
             "AI-powered Arabic grammar app for grammatical parsing, lexicon analysis, and learning modules.",
-        categories: ["Mobile App", "AI System"],
+        categories: ["Mobile App", "AI & Deep Learning Systems"],
         stack: ["Flutter", "Firebase", "OCR", "Gemini API", "Groq", "Material 3"],
         metrics: "700+ downloads",
         image: "/images/projects/irab/app_icon.png",
@@ -99,12 +99,47 @@ Key technical decisions:
 • Build iOS version
 • Integrate with Qamoos.org for deeper dictionary lookups`,
     },
+    "sentiment-ai": {
+        slug: "sentiment-ai",
+        title: "SentimentAI - NLP Analytics",
+        description:
+            "A stunning web application for analyzing customer sentiment in mobile phone reviews using advanced NLP and Machine Learning techniques.",
+        categories: ["AI & Deep Learning Systems", "Web App"],
+        stack: ["Python", "FastAPI", "Scikit-learn", "NLTK", "Gensim", "JavaScript"],
+        metrics: "Multi-Model NLP",
+        image: "/images/projects/sentiment-ai/cover nlp.png",
+        gallery: [
+            "/images/projects/sentiment-ai/Screenshot 2026-01-13 235826.png",
+            "/images/projects/sentiment-ai/Screenshot 2026-01-13 235842.png",
+            "/images/projects/sentiment-ai/Screenshot 2026-01-13 235901.png",
+        ],
+        liveUrl: "https://nlp-project-sentimentai.vercel.app/",
+        githubUrl: "https://github.com/mh2des/Sentiment-AI-NLP-",
+        featured: true,
+        role: "Lead Developer",
+        timeline: "2024",
+        overview: `SentimentAI is a modern web application designed to analyze and visualize customer sentiment from product reviews. It focuses on comparing flagship smartphones (iPhone 15 vs Galaxy S24) using a suite of Natural Language Processing (NLP) models. The application features a glassmorphism-inspired UI and provides detailed confidence scores for each prediction.`,
+        problem: `Understanding customer sentiment from text reviews can be challenging due to sarcasm, nuance, and volume. Standard tools often lack clear visualization or rely on single, opaque models. There was a need for a transparent, multi-model approach to see how different algorithms interpret the same text.`,
+        solution: `I developed a full-stack solution integrating multiple classical ML and NLP techniques:
+
+• **Multi-Model Inference** - Compares results from TF-IDF + Logistic Regression, Word2Vec + SVM, and FastText + SVM
+• **Interactive Visualization** - Displays confidence probability distributions for positive/negative sentiment
+• **Real-time Analysis** - Instant feedback on typed text
+• **Modern UI** - A responsive, glassmorphism design for an engaging user experience`,
+        impact: `• **Transparent Analysis** - Users can see how different models agree or disagree
+• **Educational Value** - Demonstrates the strengths and weaknesses of different NLP embedding techniques
+• **Production Deployment** - Hosted on Vercel with a Python backend`,
+        improvements: `• Add Transformer-based models (BERT/RoBERTa)
+• Support for custom dataset uploads
+• API endpoint for external developers
+• Multi-language support`,
+    },
     "sermon-translation": {
         slug: "sermon-translation",
         title: "Malay–English Sermon Translation",
         description:
             "Real-time subtitle synchronization for live sermons with human-in-the-loop verification workflow.",
-        categories: ["AI System", "Web Platform"],
+        categories: ["AI & Deep Learning Systems", "Web Platform"],
         stack: [
             "FastAPI",
             "Faster-Whisper Large-V3",
@@ -148,7 +183,7 @@ Key technical decisions:
         title: "Handwritten Digit Recognition",
         description:
             "Custom digit recognition system using transfer learning and ensemble voting.",
-        categories: ["Deep Learning"],
+        categories: ["AI & Deep Learning Systems"],
         stack: [
             "TensorFlow",
             "MobileNetV2",
