@@ -260,10 +260,10 @@ export default function HomePage() {
                 Start a Conversation
               </Link>
               <a
-                href="mailto:contact@mansoor.dev"
+                href="mailto:mansourshakla@gmail.com"
                 className="px-8 py-4 glass-card font-medium rounded-full hover:bg-surface-elevated transition-all duration-300"
               >
-                contact@mansoor.dev
+                mansourshakla@gmail.com
               </a>
             </div>
           </motion.div>
