@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { SpotlightCursor } from "@/components/ui/spotlight-cursor";
+import { LenisProvider } from "@/components/providers/lenis-provider";
 
 const fontDisplay = Outfit({
   subsets: ["latin"],
@@ -60,15 +61,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="dark">
       <body
         className={`${fontDisplay.variable} ${fontBody.variable} antialiased selection:bg-cyan-500/30 selection:text-cyan-200 bg-background text-foreground overflow-x-hidden`}
       >
-        <SpotlightCursor />
-        <Header />
-        <main className="min-h-screen relative">{children}</main>
-        <Footer />
+        <LenisProvider>
+          <SpotlightCursor />
+          <Header />
+          <main className="min-h-screen relative">{children}</main>
+          <Footer />
+        </LenisProvider>
       </body>
     </html>
   );
 }
+
