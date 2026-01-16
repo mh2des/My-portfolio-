@@ -2,31 +2,6 @@ import { Project } from "@/components/project-card";
 
 export const projects: Project[] = [
     {
-        slug: "learntube-ai",
-        title: "LearnTube AI",
-        description:
-            "AI-powered learning platform that transforms YouTube videos into comprehensive study materials. Features AI transcription, smart summaries, auto-generated flashcards, interactive quizzes, and an AI tutor chat.",
-        categories: ["AI & Deep Learning Systems", "Web Platform"],
-        stack: ["Next.js", "TypeScript", "FastAPI", "Python", "Gemini 2.0", "Groq Whisper", "Tailwind CSS"],
-        metrics: "Full-Stack AI",
-        image: "/images/projects/learntube-ai/learntubeai.svg",
-        githubUrl: "https://github.com/mh2des/Learntube-AI",
-        featured: true,
-    },
-    {
-        slug: "portfolio",
-        title: "Developer Portfolio",
-        description:
-            "Modern, Awwwards-level developer portfolio with cutting-edge animations, Lenis smooth scroll, 3D parallax effects, and glassmorphism design. Built with Next.js 16 and Framer Motion.",
-        categories: ["Web Platform"],
-        stack: ["Next.js", "TypeScript", "Framer Motion", "Lenis", "Tailwind CSS", "GSAP"],
-        metrics: "Premium Design",
-        image: "/images/projects/portfolio/personal_photo.png",
-        liveUrl: "https://me.qamoos.org",
-        githubUrl: "https://github.com/mh2des/My-portfolio-",
-        featured: true,
-    },
-    {
         slug: "qamoos",
         title: "Qamoos.org",
         description:
@@ -59,6 +34,31 @@ export const projects: Project[] = [
         ],
         liveUrl: "https://play.google.com/store/apps/details?id=com.irabapp.arabic",
         githubUrl: "https://github.com/mh2des/irab-models",
+        featured: true,
+    },
+    {
+        slug: "learntube-ai",
+        title: "LearnTube AI",
+        description:
+            "AI-powered learning platform that transforms YouTube videos into comprehensive study materials. Features AI transcription with 99%+ accuracy, smart summaries, auto-generated flashcards, interactive quizzes, AI tutor chat, and 25+ language translation support.",
+        categories: ["AI & Deep Learning Systems", "Web Platform"],
+        stack: ["Next.js 16", "TypeScript", "FastAPI", "Python", "Gemini 2.0 Flash", "Groq Whisper", "Tailwind CSS", "Zustand"],
+        metrics: "Full-Stack AI",
+        image: "/images/projects/learntube-ai/learntubeai.svg",
+        githubUrl: "https://github.com/mh2des/Learntube-AI",
+        featured: true,
+    },
+    {
+        slug: "portfolio",
+        title: "Developer Portfolio",
+        description:
+            "Modern, Awwwards-level developer portfolio with cutting-edge animations, Lenis smooth scroll, 3D parallax effects, mouse-reactive particles, and glassmorphism design. Features magnetic cursor, text reveal animations, and infinite marquee.",
+        categories: ["Web Platform"],
+        stack: ["Next.js 16", "TypeScript", "Framer Motion", "Lenis", "Tailwind CSS", "GSAP"],
+        metrics: "Premium Design",
+        image: "/images/projects/portfolio/personal_photo.png",
+        liveUrl: "https://me.qamoos.org",
+        githubUrl: "https://github.com/mh2des/My-portfolio-",
         featured: true,
     },
     {
