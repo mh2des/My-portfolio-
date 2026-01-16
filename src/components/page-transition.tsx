@@ -1,36 +1,25 @@
 "use client";
 
 import { ReactNode } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 interface PageTransitionProps {
     children: ReactNode;
 }
 
-const pageVariants = {
+const pageVariants: Variants = {
     initial: {
         opacity: 0,
         y: 20,
-        filter: "blur(10px)",
     },
     animate: {
         opacity: 1,
         y: 0,
-        filter: "blur(0px)",
-        transition: {
-            duration: 0.5,
-            ease: [0.25, 0.46, 0.45, 0.94],
-        },
     },
     exit: {
         opacity: 0,
         y: -20,
-        filter: "blur(10px)",
-        transition: {
-            duration: 0.3,
-            ease: [0.25, 0.46, 0.45, 0.94],
-        },
     },
 };
 
@@ -45,6 +34,7 @@ export function PageTransition({ children }: PageTransitionProps) {
                 animate="animate"
                 exit="exit"
                 variants={pageVariants}
+                transition={{ duration: 0.5, ease: "easeOut" }}
             >
                 {children}
             </motion.div>
