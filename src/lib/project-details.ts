@@ -99,6 +99,109 @@ Key technical decisions:
 • Build iOS version
 • Integrate with Qamoos.org for deeper dictionary lookups`,
     },
+    "learntube-ai": {
+        slug: "learntube-ai",
+        title: "LearnTube AI",
+        description:
+            "AI-powered learning platform that transforms YouTube videos into comprehensive study materials with AI transcription, smart summaries, flashcards, quizzes, and AI tutor chat.",
+        categories: ["AI & Deep Learning Systems", "Web Platform"],
+        stack: [
+            "Next.js 16",
+            "TypeScript",
+            "FastAPI",
+            "Python",
+            "Gemini 2.0 Flash",
+            "Groq Whisper",
+            "Tailwind CSS",
+            "Zustand",
+        ],
+        metrics: "Full-Stack AI",
+        image: "/images/projects/learntube-ai/learntubeai.svg",
+        githubUrl: "https://github.com/mh2des/Learntube-AI",
+        featured: true,
+        role: "Solo Developer",
+        timeline: "2025",
+        overview: `LearnTube AI is a modern learning platform that transforms YouTube videos into interactive study materials using advanced AI. Paste any YouTube link and get instant access to transcripts, summaries, flashcards, quizzes, and an AI tutor - all from a single video.
+
+The platform aims to make every YouTube video a comprehensive learning experience, helping students and self-learners extract maximum value from educational content.`,
+        problem: `YouTube has become the world's largest educational resource, but watching videos passively is an inefficient way to learn. Students need to:
+• Manually take notes while watching
+• Create their own flashcards
+• Find ways to test their understanding
+• Re-watch entire videos to find specific information
+
+Existing tools only solve one piece of the puzzle, requiring users to juggle multiple applications.`,
+        solution: `I built an end-to-end learning platform with a modern tech stack:
+
+• **AI Transcription** - Groq Whisper Large V3 Turbo with 99%+ accuracy across languages
+• **Smart Summaries** - Gemini 2.0 Flash for key takeaways, chapter breakdowns, and TL;DR
+• **Auto-Generated Flashcards** - Spaced repetition ready, exportable to Anki/CSV
+• **Interactive Quizzes** - Multiple choice with instant feedback and explanations
+• **AI Tutor Chat** - Ask questions about the video content, get detailed answers
+• **Translation** - 25+ languages with context-aware translation
+
+Built with Next.js 16 (App Router), FastAPI backend, and IndexedDB for offline storage.`,
+        impact: `• **Full-Stack AI Platform** - End-to-end solution from video URL to study materials
+• **99%+ Transcription Accuracy** - Using Groq's Whisper Large V3 Turbo
+• **25+ Languages** - Translation support with technical term preservation
+• **Offline Support** - IndexedDB storage for completed study materials
+• **Modern Stack** - Next.js 16, Tailwind CSS 4, Zustand state management`,
+        improvements: `• Add video annotation and timestamp bookmarking
+• Implement collaborative study rooms
+• Add progress tracking across multiple videos
+• Build mobile apps for iOS and Android
+• Integrate with LMS platforms (Canvas, Moodle)`,
+    },
+    portfolio: {
+        slug: "portfolio",
+        title: "Developer Portfolio",
+        description:
+            "Modern, Awwwards-level developer portfolio with cutting-edge animations, smooth scroll, 3D parallax effects, and glassmorphism design.",
+        categories: ["Web Platform"],
+        stack: [
+            "Next.js 16",
+            "TypeScript",
+            "Framer Motion",
+            "Lenis",
+            "Tailwind CSS",
+            "GSAP",
+        ],
+        metrics: "Premium Design",
+        image: "/images/projects/portfolio/personal_photo.png",
+        liveUrl: "https://me.qamoos.org",
+        githubUrl: "https://github.com/mh2des/My-portfolio-",
+        featured: true,
+        role: "Designer & Developer",
+        timeline: "2025",
+        overview: `A personal developer portfolio website designed to showcase my projects, skills, and experience with an Awwwards-level aesthetic. The site features buttery-smooth animations, interactive elements, and a premium dark theme with glassmorphism effects.
+
+Built as a living showcase of modern web development techniques and animation libraries.`,
+        problem: `Most developer portfolios are either:
+• Generic templates that don't stand out
+• Overly complex and slow to load
+• Missing the polish and attention to detail that makes a memorable impression
+
+I needed a portfolio that would immediately communicate my design sensibility and technical capabilities while remaining performant and accessible.`,
+        solution: `I designed and built a custom portfolio from scratch with premium touches:
+
+• **Lenis Smooth Scroll** - Buttery-smooth momentum-based scrolling
+• **Framer Motion** - Page transitions, reveal animations, and micro-interactions
+• **3D Parallax Effects** - Mouse-reactive floating shapes and gradient orbs
+• **Floating Particles** - Animated particles with glow effects
+• **Tech Stack Marquee** - Infinite scrolling ticker for technologies
+• **Enhanced Project Cards** - 3D tilt effect, animated gradient borders, shine animations
+• **Glassmorphism Design** - Frosted glass effects with subtle blur and borders`,
+        impact: `• **Premium Design** - Awwwards-level aesthetic and animation quality
+• **Performance Optimized** - Fast load times despite complex animations
+• **SEO Ready** - Proper metadata, semantic HTML, and sitemap
+• **Fully Responsive** - Beautiful on all device sizes
+• **Accessible** - Reduced motion support for users who prefer less animation`,
+        improvements: `• Add dark/light theme toggle
+• Implement blog section with MDX
+• Add project filtering animations
+• Create interactive 3D scene for hero section
+• Add case study video walkthroughs`,
+    },
     "sentiment-ai": {
         slug: "sentiment-ai",
         title: "SentimentAI - NLP Analytics",
