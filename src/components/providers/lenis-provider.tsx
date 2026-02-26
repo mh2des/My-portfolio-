@@ -1,7 +1,8 @@
 "use client";
 
-import { ReactNode, useEffect, useRef, useCallback } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import Lenis from "lenis";
+import gsap from "gsap";
 
 interface LenisProviderProps {
     children: ReactNode;
@@ -9,9 +10,6 @@ interface LenisProviderProps {
 
 export function LenisProvider({ children }: LenisProviderProps) {
     const lenisRef = useRef<Lenis | null>(null);
-    const rafIdRef = useRef<number | null>(null);
-    const isScrollingRef = useRef(false);
-    const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
         // Check for reduced motion preference
@@ -33,25 +31,20 @@ export function LenisProvider({ children }: LenisProviderProps) {
 
         lenisRef.current = lenis;
 
-        // Optimized RAF loop - only runs when scrolling
-        function raf(time: number) {
-            lenis.raf(time);
-            rafIdRef.current = requestAnimationFrame(raf);
-        }
+        // Use GSAP's optimized ticker for Lenis
+        // GSAP's ticker automatically pauses when tab is hidden, saving CPU/Battery
+        const raf = (time: number) => {
+            lenis.raf(time * 1000); // GSAP provides time in seconds, Lenis takes ms
+        };
 
-        // Start RAF loop
-        rafIdRef.current = requestAnimationFrame(raf);
+        gsap.ticker.add(raf);
+        gsap.ticker.lagSmoothing(0);
 
         // Expose lenis to window for potential GSAP integration
         (window as any).lenis = lenis;
 
         return () => {
-            if (rafIdRef.current) {
-                cancelAnimationFrame(rafIdRef.current);
-            }
-            if (scrollTimeoutRef.current) {
-                clearTimeout(scrollTimeoutRef.current);
-            }
+            gsap.ticker.remove(raf);
             lenis.destroy();
             lenisRef.current = null;
         };

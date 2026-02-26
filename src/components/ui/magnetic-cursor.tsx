@@ -44,7 +44,7 @@ export function MagneticCursor() {
             setIsHovering(false);
         };
 
-        window.addEventListener("mousemove", handleMouseMove);
+        window.addEventListener("mousemove", handleMouseMove, { passive: true });
         document.addEventListener("mouseenter", handleMouseEnter, true);
         document.addEventListener("mouseleave", handleMouseLeave, true);
 

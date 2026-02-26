@@ -286,13 +286,12 @@ body::before {
       rgba(255, 255, 255, 0.08) 0%,
       rgba(255, 255, 255, 0.02) 40%,
       rgba(13, 148, 136, 0.04) 100%);
-  backdrop-filter: blur(20px) saturate(200%);
-  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.05) inset,
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    0 0 60px rgba(13, 148, 136, 0.05);
+    0 8px 32px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -307,7 +306,7 @@ body::before {
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
-/* Premium Liquid Glass - Enhanced */
+/* Premium Liquid Glass - Optimized */
 .liquid-glass {
   background: linear-gradient(135deg,
       rgba(34, 211, 238, 0.08) 0%,
@@ -316,59 +315,34 @@ body::before {
       rgba(139, 92, 246, 0.04) 60%,
       rgba(34, 211, 238, 0.05) 80%,
       rgba(255, 255, 255, 0.08) 100%);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
   border: 1px solid rgba(34, 211, 238, 0.15);
   box-shadow:
     0 0 0 1px rgba(34, 211, 238, 0.08) inset,
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    0 0 60px rgba(34, 211, 238, 0.06),
-    0 0 100px rgba(13, 148, 136, 0.04);
+    0 8px 32px rgba(0, 0, 0, 0.4);
   position: relative;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform;
 }
 
 .liquid-glass::before {
   content: '';
   position: absolute;
   top: 0;
-  left: -150%;
-  width: 200%;
-  height: 2px;
-  background: linear-gradient(90deg,
-      transparent 0%,
-      rgba(34, 211, 238, 0.6) 25%,
-      rgba(255, 255, 255, 0.8) 50%,
-      rgba(34, 211, 238, 0.6) 75%,
-      transparent 100%);
-  animation: shimmer 4s ease-in-out infinite;
-}
-
-.liquid-glass::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 0% 0%, rgba(34, 211, 238, 0.1) 0%, transparent 40%),
-    radial-gradient(ellipse at 100% 100%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
-  pointer-events: none;
-  opacity: 0.8;
-  transition: opacity 0.5s ease;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
 .liquid-glass:hover {
-  border-color: rgba(34, 211, 238, 0.4);
-  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(34, 211, 238, 0.35);
+  transform: translateY(-4px);
   box-shadow:
-    0 0 0 1px rgba(34, 211, 238, 0.2) inset,
-    0 20px 60px rgba(0, 0, 0, 0.5),
-    0 0 80px rgba(34, 211, 238, 0.15),
-    0 0 120px rgba(13, 148, 136, 0.1);
-}
-
-.liquid-glass:hover::after {
-  opacity: 1;
+    0 0 0 1px rgba(34, 211, 238, 0.15) inset,
+    0 16px 48px rgba(0, 0, 0, 0.5);
 }
 
 /* 3D Profile Card */
