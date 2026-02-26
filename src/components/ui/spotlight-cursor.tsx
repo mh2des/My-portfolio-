@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 
 export function SpotlightCursor() {
@@ -11,10 +11,6 @@ export function SpotlightCursor() {
 
     const springX = useSpring(mouseX, { stiffness: 500, damping: 28 });
     const springY = useSpring(mouseY, { stiffness: 500, damping: 28 });
-
-    // Separate springs for the inner dot (tighter follow)
-    const dotX = useSpring(mouseX, { stiffness: 1000, damping: 50 });
-    const dotY = useSpring(mouseY, { stiffness: 1000, damping: 50 });
 
     useEffect(() => {
         // Only show on desktop
@@ -37,30 +33,16 @@ export function SpotlightCursor() {
     return (
         <motion.div
             className="fixed inset-0 z-30 pointer-events-none"
-            style={{ mixBlendMode: "screen" }}
         >
             <motion.div
-                className="absolute w-[400px] h-[400px] rounded-full opacity-30"
+                className="absolute w-[400px] h-[400px] rounded-full opacity-20"
                 style={{
                     x: springX,
                     y: springY,
-                    background: `radial-gradient(circle, rgba(34, 211, 238, 0.15) 0%, rgba(13, 148, 136, 0.05) 40%, transparent 70%)`,
-                    willChange: "transform",
-                }}
-            />
-
-            {/* Secondary smaller intense glow */}
-            <motion.div
-                className="absolute w-4 h-4 rounded-full bg-cyan-400 blur-sm z-50 hidden lg:block opacity-50"
-                style={{
-                    x: dotX,
-                    y: dotY,
-                    translateX: 198,
-                    translateY: 198,
+                    background: `radial-gradient(circle, rgba(79, 209, 197, 0.08) 0%, rgba(99, 179, 237, 0.03) 40%, transparent 70%)`,
                     willChange: "transform",
                 }}
             />
         </motion.div>
     );
 }
-

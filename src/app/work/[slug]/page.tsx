@@ -63,7 +63,7 @@ export default function ProjectPage({ params }: PageProps) {
                         >
                             <Link
                                 href="/work"
-                                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8 group"
+                                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8 group"
                             >
                                 <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                                 Back to Work
@@ -80,13 +80,13 @@ export default function ProjectPage({ params }: PageProps) {
                                 <div className="flex flex-wrap items-center gap-3 mb-6">
                                     <div className="flex flex-wrap gap-2">
                                         {project.categories.map(cat => (
-                                            <span key={cat} className="px-4 py-1.5 text-sm font-medium bg-primary/20 text-primary rounded-full border border-primary/30">
+                                            <span key={cat} className="px-4 py-1.5 text-sm font-medium bg-gray-100 text-foreground rounded-full border border-gray-200">
                                                 {cat}
                                             </span>
                                         ))}
                                     </div>
                                     {project.metrics && (
-                                        <span className="px-4 py-1.5 text-sm font-bold bg-gradient-to-r from-primary to-cyan-400 text-background rounded-full">
+                                        <span className="px-4 py-1.5 text-sm font-bold bg-foreground text-white rounded-full">
                                             {project.metrics}
                                         </span>
                                     )}
@@ -103,15 +103,15 @@ export default function ProjectPage({ params }: PageProps) {
                                 {/* Meta Info */}
                                 <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground mb-8">
                                     <div className="flex items-center gap-2">
-                                        <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                                            <User size={14} className="text-primary" />
+                                        <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                                            <User size={14} className="text-foreground" />
                                         </div>
                                         <span>{project.role}</span>
                                     </div>
                                     {project.timeline && (
                                         <div className="flex items-center gap-2">
-                                            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                                                <Calendar size={14} className="text-primary" />
+                                            <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                                                <Calendar size={14} className="text-foreground" />
                                             </div>
                                             <span>{project.timeline}</span>
                                         </div>
@@ -126,7 +126,7 @@ export default function ProjectPage({ params }: PageProps) {
                                             initial={{ opacity: 0, scale: 0.8 }}
                                             animate={{ opacity: 1, scale: 1 }}
                                             transition={{ delay: idx * 0.05 }}
-                                            className="px-4 py-2 text-sm font-mono bg-surface-elevated/50 border border-border/50 rounded-full text-muted-foreground hover:border-primary/30 hover:text-foreground transition-colors"
+                                            className="px-4 py-2 text-sm font-mono bg-white/60 border border-gray-200 rounded-full text-muted-foreground hover:border-gray-300 hover:text-foreground transition-colors"
                                         >
                                             {tech}
                                         </motion.span>
@@ -140,7 +140,7 @@ export default function ProjectPage({ params }: PageProps) {
                                             href={project.liveUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-background font-medium rounded-full hover:bg-primary-hover transition-all duration-300 hover-glow"
+                                            className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-white font-medium rounded-full hover:bg-foreground/90 transition-all duration-300 shadow-sm"
                                         >
                                             <ExternalLink size={16} />
                                             View Live
@@ -151,7 +151,7 @@ export default function ProjectPage({ params }: PageProps) {
                                             href={project.githubUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-2 px-6 py-3 liquid-glass font-medium rounded-full hover:border-primary/30 transition-colors"
+                                            className="inline-flex items-center gap-2 px-6 py-3 liquid-glass font-medium rounded-full hover:border-gray-300 transition-colors"
                                         >
                                             <Github size={16} />
                                             Source Code
@@ -176,10 +176,10 @@ export default function ProjectPage({ params }: PageProps) {
                                             className="object-cover"
                                             priority
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent" />
                                     </div>
                                     {/* Decorative glow */}
-                                    <div className="absolute -inset-4 bg-primary/10 rounded-3xl blur-3xl -z-10" />
+                                    <div className="absolute -inset-4 bg-teal-200/10 rounded-3xl blur-3xl -z-10" />
                                 </motion.div>
                             )}
                         </div>
@@ -197,8 +197,8 @@ export default function ProjectPage({ params }: PageProps) {
                                 className="mb-10"
                             >
                                 <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 to-primary/10 flex items-center justify-center">
-                                        <Images size={20} className="text-cyan-400" />
+                                    <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center">
+                                        <Images size={20} className="text-foreground" />
                                     </div>
                                     <h2 className="text-2xl font-display font-bold">Project Screenshots</h2>
                                 </div>
@@ -220,7 +220,7 @@ export default function ProjectPage({ params }: PageProps) {
                                             fill
                                             className="object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                     </motion.div>
                                 ))}
                             </div>
@@ -241,8 +241,8 @@ export default function ProjectPage({ params }: PageProps) {
                             {/* Overview */}
                             <motion.div variants={fadeInUp} className="liquid-glass rounded-3xl p-8 md:p-10">
                                 <div className="flex items-center gap-3 mb-6">
-                                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-cyan-400/10 flex items-center justify-center">
-                                        <Target size={24} className="text-primary" />
+                                    <div className="w-12 h-12 rounded-2xl bg-gray-100 flex items-center justify-center">
+                                        <Target size={24} className="text-foreground" />
                                     </div>
                                     <h2 className="text-2xl font-display font-bold">Overview</h2>
                                 </div>
@@ -252,10 +252,10 @@ export default function ProjectPage({ params }: PageProps) {
                             </motion.div>
 
                             {/* Problem */}
-                            <motion.div variants={fadeInUp} className="liquid-glass rounded-3xl p-8 md:p-10 border-l-4 border-l-orange-500/50">
+                            <motion.div variants={fadeInUp} className="liquid-glass rounded-3xl p-8 md:p-10 border-l-4 border-l-orange-400">
                                 <div className="flex items-center gap-3 mb-6">
-                                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500/20 to-red-400/10 flex items-center justify-center">
-                                        <Zap size={24} className="text-orange-400" />
+                                    <div className="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center">
+                                        <Zap size={24} className="text-orange-500" />
                                     </div>
                                     <h2 className="text-2xl font-display font-bold">Problem & Constraints</h2>
                                 </div>
@@ -265,10 +265,10 @@ export default function ProjectPage({ params }: PageProps) {
                             </motion.div>
 
                             {/* Solution */}
-                            <motion.div variants={fadeInUp} className="liquid-glass rounded-3xl p-8 md:p-10 border-l-4 border-l-primary">
+                            <motion.div variants={fadeInUp} className="liquid-glass rounded-3xl p-8 md:p-10 border-l-4 border-l-foreground/30">
                                 <div className="flex items-center gap-3 mb-6">
-                                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-cyan-400/10 flex items-center justify-center">
-                                        <Lightbulb size={24} className="text-primary" />
+                                    <div className="w-12 h-12 rounded-2xl bg-gray-100 flex items-center justify-center">
+                                        <Lightbulb size={24} className="text-foreground" />
                                     </div>
                                     <h2 className="text-2xl font-display font-bold">Solution</h2>
                                 </div>
@@ -278,10 +278,10 @@ export default function ProjectPage({ params }: PageProps) {
                             </motion.div>
 
                             {/* Impact */}
-                            <motion.div variants={fadeInUp} className="liquid-glass rounded-3xl p-8 md:p-10 border-l-4 border-l-green-500/50">
+                            <motion.div variants={fadeInUp} className="liquid-glass rounded-3xl p-8 md:p-10 border-l-4 border-l-green-400">
                                 <div className="flex items-center gap-3 mb-6">
-                                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-green-500/20 to-emerald-400/10 flex items-center justify-center">
-                                        <TrendingUp size={24} className="text-green-400" />
+                                    <div className="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center">
+                                        <TrendingUp size={24} className="text-green-500" />
                                     </div>
                                     <h2 className="text-2xl font-display font-bold">Impact & Results</h2>
                                 </div>
@@ -293,8 +293,8 @@ export default function ProjectPage({ params }: PageProps) {
                             {/* Improvements */}
                             <motion.div variants={fadeInUp} className="liquid-glass rounded-3xl p-8 md:p-10">
                                 <div className="flex items-center gap-3 mb-6">
-                                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-400/10 flex items-center justify-center">
-                                        <ArrowRight size={24} className="text-purple-400" />
+                                    <div className="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center">
+                                        <ArrowRight size={24} className="text-purple-500" />
                                     </div>
                                     <h2 className="text-2xl font-display font-bold">What I&apos;d Improve Next</h2>
                                 </div>
@@ -313,14 +313,14 @@ export default function ProjectPage({ params }: PageProps) {
                         >
                             <Link
                                 href="/work"
-                                className="inline-flex items-center gap-2 px-6 py-3 liquid-glass font-medium rounded-full hover:border-primary/30 transition-colors"
+                                className="inline-flex items-center gap-2 px-6 py-3 liquid-glass font-medium rounded-full hover:border-gray-300 transition-colors"
                             >
                                 <ArrowLeft size={16} />
                                 Back to all projects
                             </Link>
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-background font-medium rounded-full hover:bg-primary-hover transition-all duration-300 hover-glow"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-white font-medium rounded-full hover:bg-foreground/90 transition-all duration-300 shadow-sm"
                             >
                                 Get in touch
                                 <ArrowRight size={16} />

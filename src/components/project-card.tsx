@@ -47,14 +47,14 @@ export function ProjectCard({
         >
             <Link href={`/work/${project.slug}`} className="block h-full">
                 {/* Image Container */}
-                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl liquid-glass project-card transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-primary/10">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl project-card transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-gray-300/30">
                     {/* Category badges */}
                     <div className="absolute top-4 left-4 z-20 flex flex-wrap gap-2">
                         {project.categories.slice(0, 2).map((cat) => (
                             <Badge
                                 key={cat}
                                 variant="secondary"
-                                className="backdrop-blur-md bg-background/50 border-white/10 text-xs font-medium"
+                                className="backdrop-blur-md bg-white/70 border-gray-200/60 text-xs font-medium text-foreground"
                             >
                                 {cat}
                             </Badge>
@@ -73,7 +73,7 @@ export function ProjectCard({
                             loading={index < 4 ? undefined : "lazy"}
                         />
                     ) : (
-                        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/20 to-purple-500/10">
+                        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50">
                             <span className="text-5xl font-display font-bold text-gradient">
                                 {project.title.charAt(0)}
                             </span>
@@ -81,11 +81,11 @@ export function ProjectCard({
                     )}
 
                     {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-300" />
 
                     {/* Hover indicator */}
                     <div className="absolute top-4 right-4 opacity-0 -translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-background shadow-lg">
+                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-foreground text-white shadow-lg">
                             <ArrowUpRight size={18} />
                         </div>
                     </div>
@@ -93,7 +93,7 @@ export function ProjectCard({
                     {/* Metrics badge */}
                     {project.metrics && (
                         <div className="absolute bottom-4 left-4">
-                            <span className="px-3 py-1.5 text-xs font-bold bg-black/60 backdrop-blur-md border border-white/10 text-white rounded-full">
+                            <span className="px-3 py-1.5 text-xs font-bold bg-white/80 backdrop-blur-md border border-gray-200/60 text-foreground rounded-full shadow-sm">
                                 {project.metrics}
                             </span>
                         </div>
@@ -102,7 +102,7 @@ export function ProjectCard({
 
                 {/* Content */}
                 <div className="mt-4 space-y-2">
-                    <h3 className="text-lg font-semibold tracking-tight group-hover:text-primary transition-colors duration-200">
+                    <h3 className="text-lg font-semibold tracking-tight group-hover:text-muted-foreground transition-colors duration-200">
                         {project.title}
                     </h3>
                     <p className="text-sm text-muted-foreground line-clamp-2">

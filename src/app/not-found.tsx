@@ -32,7 +32,7 @@ export default function NotFound() {
                                 transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
                                 className="absolute -top-4 -right-4"
                             >
-                                <Search size={48} className="text-primary/50" />
+                                <Search size={48} className="text-gray-300" />
                             </motion.div>
                         </motion.div>
 
@@ -64,14 +64,14 @@ export default function NotFound() {
                         >
                             <Link
                                 href="/"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-background font-medium rounded-full hover:bg-primary-hover transition-all duration-300 hover-glow"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-white font-medium rounded-full hover:bg-foreground/90 transition-all duration-300 shadow-sm"
                             >
                                 <Home size={18} />
                                 Go Home
                             </Link>
                             <button
                                 onClick={() => window.history.back()}
-                                className="inline-flex items-center gap-2 px-6 py-3 liquid-glass font-medium rounded-full hover:border-primary/30 transition-colors"
+                                className="inline-flex items-center gap-2 px-6 py-3 liquid-glass font-medium rounded-full hover:border-gray-300 transition-colors"
                             >
                                 <ArrowLeft size={18} />
                                 Go Back

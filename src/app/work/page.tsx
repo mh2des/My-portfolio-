@@ -28,7 +28,7 @@ export default function WorkPage() {
                         transition={{ duration: 0.6 }}
                         className="max-w-2xl mb-16"
                     >
-                        <span className="text-sm font-mono text-primary uppercase tracking-widest mb-4 block">
+                        <span className="text-sm font-mono text-muted-foreground uppercase tracking-widest mb-4 block">
                             Portfolio
                         </span>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
@@ -57,8 +57,8 @@ export default function WorkPage() {
                                 className={cn(
                                     "px-5 py-2.5 text-sm font-medium rounded-full transition-all duration-300",
                                     activeCategory === category
-                                        ? "bg-primary text-background shadow-lg shadow-primary/30"
-                                        : "liquid-glass text-muted-foreground hover:text-foreground hover:border-primary/30"
+                                        ? "bg-foreground text-white shadow-md shadow-gray-400/20"
+                                        : "bg-white/60 backdrop-blur-sm border border-gray-200/60 text-muted-foreground hover:text-foreground hover:border-gray-300"
                                 )}
                             >
                                 {category}

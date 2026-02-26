@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState, useMemo } from "react";
+import { useRef } from "react";
 import {
     motion,
     useReducedMotion,
@@ -50,43 +50,41 @@ export function Hero3D() {
             ref={containerRef}
             className="relative min-h-screen flex items-center justify-center overflow-hidden"
         >
-            {/* Static Background Gradient - no animation */}
+            {/* Subtle background gradient */}
             <div
-                className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent"
+                className="absolute inset-0"
                 style={{
-                    background: "radial-gradient(circle at 50% 30%, rgba(13, 148, 136, 0.15) 0%, transparent 50%)",
+                    background: "radial-gradient(circle at 50% 30%, rgba(79, 209, 197, 0.06) 0%, transparent 50%)",
                 }}
             />
 
-            {/* Simplified Background Elements */}
+            {/* Background orbs */}
             <div className="absolute inset-0 overflow-hidden">
-                {/* Single gradient orb - CSS animation instead of JS */}
                 <div
-                    className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[100px] animate-pulse-slow"
+                    className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-teal-400/[0.06] rounded-full blur-[100px] animate-pulse-slow"
                 />
                 <div
-                    className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-cyan-400/10 rounded-full blur-[80px] animate-pulse-slow"
+                    className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-300/[0.05] rounded-full blur-[80px] animate-pulse-slow"
                     style={{ animationDelay: "2s" }}
                 />
 
-                {/* Grid pattern - static */}
+                {/* Grid pattern */}
                 <div
                     className="absolute inset-0 opacity-[0.02]"
                     style={{
-                        backgroundImage: `linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)`,
+                        backgroundImage: `linear-gradient(rgba(0,0,0,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.15) 1px, transparent 1px)`,
                         backgroundSize: "80px 80px",
                     }}
                 />
             </div>
 
-            {/* Simplified floating shapes - CSS animations only */}
+            {/* Floating shape */}
             <motion.div style={{ y, opacity }} className="absolute inset-0 pointer-events-none">
-                {/* Single rotating shape */}
                 {!shouldReduceMotion && (
                     <div
                         className="absolute top-[15%] right-[12%] w-28 h-28 animate-float"
                     >
-                        <div className="w-full h-full rounded-3xl rotate-45 bg-gradient-to-br from-primary/15 to-cyan-400/5 border border-primary/30 backdrop-blur-sm" />
+                        <div className="w-full h-full rounded-3xl rotate-45 bg-white/40 border border-gray-200/60 shadow-lg shadow-gray-200/20" />
                     </div>
                 )}
             </motion.div>
@@ -114,21 +112,21 @@ export function Hero3D() {
                         <span className="text-sm text-muted-foreground">
                             Available for new projects
                         </span>
-                        <span className="text-border">•</span>
+                        <span className="text-gray-300">•</span>
                         <span className="flex items-center gap-1 text-sm text-muted-foreground">
                             <MapPin size={12} />
                             Malaysia
                         </span>
                     </motion.div>
 
-                    {/* Main Title - simplified animation */}
+                    {/* Main Title */}
                     <motion.h1
                         initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.6 }}
                         className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-6"
                     >
-                        <span className="block">Data Scientist</span>
+                        <span className="block text-foreground">Data Scientist</span>
                         <span className="block mt-2">
                             <span className="text-gradient">&</span>{" "}
                             <span className="text-muted-foreground">Software Engineer</span>
@@ -161,20 +159,20 @@ export function Hero3D() {
                     >
                         <Link
                             href="/work"
-                            className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-background font-medium rounded-full hover:bg-primary-hover transition-colors duration-200"
+                            className="group inline-flex items-center gap-2 px-8 py-4 bg-foreground text-white font-medium rounded-full hover:bg-foreground/90 transition-all duration-200 shadow-lg shadow-gray-400/20"
                         >
                             <Sparkles size={18} />
                             View My Work
                         </Link>
                         <Link
                             href="/contact"
-                            className="group inline-flex items-center gap-2 px-8 py-4 glass-card font-medium rounded-full hover:bg-surface-elevated transition-colors duration-200"
+                            className="group inline-flex items-center gap-2 px-8 py-4 glass-card font-medium rounded-full hover:bg-white/80 transition-all duration-200"
                         >
                             Get in Touch
                         </Link>
                     </motion.div>
 
-                    {/* Tech Stack Marquee - only render if in view */}
+                    {/* Tech Stack Marquee */}
                     {isInView && (
                         <motion.div
                             initial={{ opacity: 0 }}
@@ -199,7 +197,7 @@ export function Hero3D() {
                         initial={shouldReduceMotion ? {} : { opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.8, duration: 0.5 }}
-                        className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-12 border-t border-border/50"
+                        className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-12 border-t border-gray-200/60"
                     >
                         <StatCounter value="189000+" label="Dictionary Entries" delay={0.9} />
                         <StatCounter value="1000+" label="App Downloads" delay={1.0} />
@@ -209,7 +207,7 @@ export function Hero3D() {
                 </motion.div>
             </div>
 
-            {/* Simplified Scroll Indicator */}
+            {/* Scroll Indicator */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -218,8 +216,8 @@ export function Hero3D() {
             >
                 <div className="flex flex-col items-center gap-2 text-muted-foreground">
                     <span className="text-xs uppercase tracking-widest">Scroll</span>
-                    <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
-                        <div className="w-1 h-2 bg-primary rounded-full animate-bounce" />
+                    <div className="w-6 h-10 rounded-full border-2 border-gray-300 flex items-start justify-center p-2">
+                        <div className="w-1 h-2 bg-foreground/50 rounded-full animate-bounce" />
                     </div>
                 </div>
             </motion.div>

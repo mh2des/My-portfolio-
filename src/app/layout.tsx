@@ -61,9 +61,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body
-        className={`${fontDisplay.variable} ${fontBody.variable} antialiased selection:bg-cyan-500/30 selection:text-cyan-200 bg-background text-foreground overflow-x-hidden`}
+        className={`${fontDisplay.variable} ${fontBody.variable} antialiased selection:bg-teal-400/25 selection:text-foreground bg-background text-foreground overflow-x-hidden`}
       >
         <LenisProvider>
           <Header />

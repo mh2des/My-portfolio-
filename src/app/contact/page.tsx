@@ -11,21 +11,21 @@ const contactMethods = [
         label: "Email",
         value: "Mansourshakla@gmail.com",
         href: "mailto:Mansourshakla@gmail.com",
-        gradient: "from-red-500/20 to-orange-500/20",
+        gradient: "from-red-100 to-orange-100",
     },
     {
         icon: Linkedin,
         label: "LinkedIn",
         value: "mansoor-shokla",
         href: "https://linkedin.com/in/mansoor-shokla-1a9781353",
-        gradient: "from-blue-500/20 to-cyan-500/20",
+        gradient: "from-blue-100 to-cyan-100",
     },
     {
         icon: Github,
         label: "GitHub",
         value: "mh2des",
         href: "https://github.com/mh2des",
-        gradient: "from-purple-500/20 to-pink-500/20",
+        gradient: "from-purple-100 to-pink-100",
     },
 ];
 
@@ -42,7 +42,7 @@ export default function ContactPage() {
                         transition={{ duration: 0.8 }}
                         className="text-center mb-16"
                     >
-                        <span className="text-sm font-mono text-primary uppercase tracking-widest mb-4 block">
+                        <span className="text-sm font-mono text-muted-foreground uppercase tracking-widest mb-4 block">
                             Contact
                         </span>
                         <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
@@ -71,7 +71,7 @@ export default function ContactPage() {
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
-                                className="group liquid-glass rounded-2xl p-6 flex items-center justify-between hover:border-primary/30 transition-all duration-300"
+                                className="group liquid-glass rounded-2xl p-6 flex items-center justify-between hover:border-gray-300 transition-all duration-300"
                             >
                                 <div className="flex items-center gap-5">
                                     <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${method.gradient} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -84,7 +84,7 @@ export default function ContactPage() {
                                 </div>
                                 <ArrowUpRight
                                     size={24}
-                                    className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300"
+                                    className="text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300"
                                 />
                             </motion.a>
                         ))}
@@ -97,9 +97,9 @@ export default function ContactPage() {
                         transition={{ delay: 0.6, duration: 0.8 }}
                         className="flex items-center justify-center gap-3 text-muted-foreground mb-12"
                     >
-                        <MapPin size={16} className="text-primary" />
+                        <MapPin size={16} className="text-foreground" />
                         <span>Alor Setar, Kedah, Malaysia</span>
-                        <span className="text-border">·</span>
+                        <span className="text-gray-300">·</span>
                         <span>UTC+8</span>
                     </motion.div>
 
@@ -112,7 +112,7 @@ export default function ContactPage() {
                     >
                         <Link
                             href="mailto:Mansourshakla@gmail.com"
-                            className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-background font-medium rounded-full hover:bg-primary-hover transition-all duration-300"
+                            className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-white font-medium rounded-full hover:bg-foreground/90 transition-all duration-300 shadow-lg shadow-gray-400/20"
                         >
                             <Send size={18} />
                             Send an Email
@@ -120,7 +120,7 @@ export default function ContactPage() {
                         <a
                             href="/cv/Mansoor_Software_CV.pdf"
                             download
-                            className="inline-flex items-center gap-3 px-8 py-4 liquid-glass font-medium rounded-full hover:border-primary/30 transition-colors"
+                            className="inline-flex items-center gap-3 px-8 py-4 liquid-glass font-medium rounded-full hover:border-gray-300 transition-colors"
                         >
                             <Download size={18} />
                             Download CV

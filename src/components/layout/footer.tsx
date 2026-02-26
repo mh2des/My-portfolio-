@@ -20,17 +20,17 @@ const navLinks = [
 export function Footer() {
     return (
         <footer className="relative z-10 mt-20">
-            {/* Top gradient line */}
-            <div className="h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+            {/* Top line */}
+            <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
-            <div className="liquid-glass rounded-t-3xl py-16">
+            <div className="bg-white/50 backdrop-blur-xl border-t border-gray-200/40 py-16">
                 <div className="container-wide">
                     <div className="grid gap-12 md:grid-cols-4">
                         {/* Brand & Location */}
                         <div className="md:col-span-2 space-y-4">
                             <Link
                                 href="/"
-                                className="font-display text-xl font-semibold tracking-tight hover:text-primary transition-colors"
+                                className="font-display text-xl font-semibold tracking-tight hover:text-muted-foreground transition-colors"
                             >
                                 Mansoor Shokal
                             </Link>
@@ -39,7 +39,7 @@ export function Footer() {
                                 and production-grade mobile & web applications.
                             </p>
                             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                                <MapPin size={14} className="text-primary" />
+                                <MapPin size={14} className="text-foreground" />
                                 <span>Based in Malaysia</span>
                             </div>
 
@@ -47,7 +47,7 @@ export function Footer() {
                             <a
                                 href="/cv/Mansoor_Software_CV.pdf"
                                 download
-                                className="inline-flex items-center gap-2 px-4 py-2 mt-2 text-sm font-medium border border-border rounded-full hover:border-primary/30 hover:text-primary transition-all"
+                                className="inline-flex items-center gap-2 px-4 py-2 mt-2 text-sm font-medium border border-gray-200 rounded-full hover:border-gray-300 hover:text-foreground transition-all"
                             >
                                 <Download size={14} />
                                 Download CV
@@ -62,7 +62,7 @@ export function Footer() {
                                     <li key={link.href}>
                                         <Link
                                             href={link.href}
-                                            className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                                            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                                         >
                                             {link.label}
                                         </Link>
@@ -81,7 +81,7 @@ export function Footer() {
                                         href={social.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
+                                        className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-gray-300 hover:bg-gray-50 transition-all"
                                         aria-label={social.label}
                                     >
                                         <social.icon size={18} />
@@ -90,15 +90,15 @@ export function Footer() {
                             </div>
 
                             {/* Availability Badge */}
-                            <div className="mt-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20">
+                            <div className="mt-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-50 border border-green-200">
                                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                <span className="text-xs text-green-400">Available for work</span>
+                                <span className="text-xs text-green-700">Available for work</span>
                             </div>
                         </div>
                     </div>
 
                     {/* Bottom */}
-                    <div className="mt-12 pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <div className="mt-12 pt-8 border-t border-gray-200/60 flex flex-col sm:flex-row justify-between items-center gap-4">
                         <p className="text-sm text-muted-foreground">
                             © {new Date().getFullYear()} Mansoor Shokal. All rights reserved.
                         </p>

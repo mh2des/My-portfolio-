@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Code, Brain, Smartphone, Database, Star, Lightbulb, Rocket, CheckCircle } from "lucide-react";
+import { ArrowRight, Code, Brain, Smartphone, Database, Star, Lightbulb, Rocket } from "lucide-react";
 import Link from "next/link";
 import { Hero3D } from "@/components/hero-3d";
 import { ProjectCard } from "@/components/project-card";
@@ -71,7 +71,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <span className="text-sm font-mono text-primary uppercase tracking-widest mb-4 block">
+            <span className="text-sm font-mono text-muted-foreground uppercase tracking-widest mb-4 block">
               What I Do
             </span>
             <h2 className="text-3xl md:text-4xl font-display font-bold">
@@ -87,10 +87,10 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="liquid-glass rounded-2xl p-6 text-center group hover:border-primary/30 transition-all duration-300"
+                className="liquid-glass rounded-2xl p-6 text-center group hover:border-gray-300 transition-all duration-300"
               >
-                <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <skill.icon size={24} className="text-primary" />
+                <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gray-100 flex items-center justify-center group-hover:bg-gray-200/80 transition-colors">
+                  <skill.icon size={24} className="text-foreground" />
                 </div>
                 <h3 className="font-display font-semibold mb-2">{skill.label}</h3>
                 <p className="text-sm text-muted-foreground">{skill.desc}</p>
@@ -111,14 +111,14 @@ export default function HomePage() {
             className="flex items-end justify-between gap-4 mb-12"
           >
             <div>
-              <span className="text-sm font-mono text-primary uppercase tracking-widest mb-4 block">
+              <span className="text-sm font-mono text-muted-foreground uppercase tracking-widest mb-4 block">
                 Selected Work
               </span>
               <h2 className="text-3xl md:text-4xl font-display font-bold">Featured Projects</h2>
             </div>
             <Link
               href="/work"
-              className="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               View all
               <ArrowRight size={14} />
@@ -153,7 +153,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <span className="text-sm font-mono text-primary uppercase tracking-widest mb-4 block">
+            <span className="text-sm font-mono text-muted-foreground uppercase tracking-widest mb-4 block">
               What People Say
             </span>
             <h2 className="text-3xl md:text-4xl font-display font-bold">
@@ -169,9 +169,9 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="liquid-glass rounded-2xl p-8 relative group hover:bg-white/[0.03] transition-colors"
+                className="liquid-glass rounded-2xl p-8 relative group hover:bg-white/80 transition-colors"
               >
-                <div className="absolute top-8 right-8 text-primary/20">
+                <div className="absolute top-8 right-8 text-gray-200">
                   <Star size={24} fill="currentColor" />
                 </div>
                 <div className="flex gap-1 mb-6 text-amber-400">
@@ -180,11 +180,11 @@ export default function HomePage() {
                   ))}
                 </div>
                 <blockquote className="text-lg mb-6 leading-relaxed">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </blockquote>
                 <div>
                   <div className="font-semibold text-foreground">{testimonial.author}</div>
-                  <div className="text-sm text-primary">{testimonial.app}</div>
+                  <div className="text-sm text-muted-foreground">{testimonial.app}</div>
                 </div>
               </motion.div>
             ))}
@@ -193,7 +193,7 @@ export default function HomePage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 relative bg-surface-elevated/30">
+      <section className="py-24 relative bg-white/40">
         <div className="container-wide">
           <motion.div
             initial={shouldReduceMotion ? {} : { opacity: 0, y: 30 }}
@@ -202,7 +202,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="mb-16 max-w-2xl"
           >
-            <span className="text-sm font-mono text-primary uppercase tracking-widest mb-4 block">
+            <span className="text-sm font-mono text-muted-foreground uppercase tracking-widest mb-4 block">
               My Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
@@ -221,10 +221,10 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2, duration: 0.5 }}
-                className="relative pl-8 border-l-2 border-primary/20 group hover:border-primary transition-colors"
+                className="relative pl-8 border-l-2 border-gray-200 group hover:border-foreground/30 transition-colors"
               >
                 <div className="mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-surface-elevated flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center text-foreground group-hover:scale-110 transition-transform duration-300">
                     <step.icon size={24} />
                   </div>
                 </div>
@@ -238,7 +238,7 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-teal-50/30 via-transparent to-transparent opacity-50" />
         <div className="container-wide relative z-10 text-center">
           <motion.div
             initial={shouldReduceMotion ? {} : { opacity: 0, scale: 0.9 }}
@@ -250,18 +250,18 @@ export default function HomePage() {
               Have a project in mind?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-              Let's collaborate to build something extraordinary. I'm currently available for freelance projects and consulting.
+              Let&apos;s collaborate to build something extraordinary. I&apos;m currently available for freelance projects and consulting.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-primary text-background font-bold rounded-full hover:bg-primary-hover transition-all duration-300 hover:scale-105 hover-glow"
+                className="px-8 py-4 bg-foreground text-white font-bold rounded-full hover:bg-foreground/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-gray-400/20"
               >
                 Start a Conversation
               </Link>
               <a
                 href="mailto:mansourshakla@gmail.com"
-                className="px-8 py-4 glass-card font-medium rounded-full hover:bg-surface-elevated transition-all duration-300"
+                className="px-8 py-4 glass-card font-medium rounded-full hover:bg-white/80 transition-all duration-300"
               >
                 mansourshakla@gmail.com
               </a>
