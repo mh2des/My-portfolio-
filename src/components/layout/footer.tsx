@@ -88,12 +88,6 @@ export function Footer() {
                                     </a>
                                 ))}
                             </div>
-
-                            {/* Availability Badge */}
-                            <div className="mt-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-50 border border-green-200">
-                                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                <span className="text-xs text-green-700">Available for work</span>
-                            </div>
                         </div>
                     </div>
 

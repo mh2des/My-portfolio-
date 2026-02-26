@@ -8,19 +8,19 @@
    ═══════════════════════════════════════════════════════ */
 
 :root {
-  --background: #F0F4F8;
-  --background-secondary: #E8EDF2;
+  --background: #E2E8F0;
+  --background-secondary: #DAE1EA;
   --foreground: #1A202C;
   --primary: #2D3748;
   --primary-hover: #1A202C;
   --primary-glow: rgba(45, 55, 72, 0.15);
-  --muted-foreground: #718096;
-  --border: #E2E8F0;
+  --muted-foreground: #4A5568;
+  --border: #CBD5E0;
   --surface: #FFFFFF;
-  --surface-elevated: #F7FAFC;
-  --accent-teal: #4FD1C5;
-  --accent-blue: #63B3ED;
-  --accent-purple: #9F7AEA;
+  --surface-elevated: #EDF2F7;
+  --accent-teal: #38B2AC;
+  --accent-blue: #4299E1;
+  --accent-purple: #805AD5;
 }
 
 /* ─── Base ─── */
@@ -59,7 +59,7 @@ body {
 
 body {
   background:
-    linear-gradient(180deg, #F0F4F8 0%, #E8EDF2 40%, #F0F4F8 100%);
+    linear-gradient(180deg, #E2E8F0 0%, #DAE1EA 40%, #E2E8F0 100%);
   background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-body), system-ui, sans-serif;
@@ -252,13 +252,13 @@ body::before {
    ═════════════════════════════════ */
 
 .glass {
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(203, 213, 224, 0.7);
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.04),
-    0 4px 20px rgba(0, 0, 0, 0.03);
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .glass-subtle {
@@ -269,13 +269,13 @@ body::before {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(16px) saturate(150%);
   -webkit-backdrop-filter: blur(16px) saturate(150%);
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(203, 213, 224, 0.6);
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.04),
-    0 4px 24px rgba(0, 0, 0, 0.04);
+    0 1px 4px rgba(0, 0, 0, 0.08),
+    0 4px 24px rgba(0, 0, 0, 0.06);
   position: relative;
   overflow: hidden;
 }
@@ -292,13 +292,13 @@ body::before {
 
 /* ─── Liquid Glass (Light Frosted) ─── */
 .liquid-glass {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(16px) saturate(150%);
   -webkit-backdrop-filter: blur(16px) saturate(150%);
-  border: 1px solid rgba(226, 232, 240, 0.6);
+  border: 1px solid rgba(203, 213, 224, 0.65);
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.04),
-    0 4px 24px rgba(0, 0, 0, 0.03);
+    0 1px 4px rgba(0, 0, 0, 0.07),
+    0 6px 24px rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
@@ -317,11 +317,11 @@ body::before {
 }
 
 .liquid-glass:hover {
-  border-color: rgba(79, 209, 197, 0.3);
+  border-color: rgba(160, 174, 192, 0.7);
   transform: translateY(-2px);
   box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.06),
-    0 12px 36px rgba(0, 0, 0, 0.04);
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    0 12px 36px rgba(0, 0, 0, 0.06);
 }
 
 /* ─── Profile Card ─── */
@@ -383,11 +383,11 @@ body::before {
   position: relative;
   overflow: hidden;
   border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(226, 232, 240, 0.6);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(203, 213, 224, 0.65);
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.04),
-    0 4px 24px rgba(0, 0, 0, 0.03);
+    0 2px 6px rgba(0, 0, 0, 0.07),
+    0 6px 24px rgba(0, 0, 0, 0.05);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   will-change: transform;
 }

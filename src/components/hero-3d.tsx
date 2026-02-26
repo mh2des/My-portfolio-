@@ -8,7 +8,7 @@ import {
     useTransform,
     useInView,
 } from "framer-motion";
-import { MapPin, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import Link from "next/link";
 import { StatCounter } from "@/components/animated-counter";
 import {
@@ -105,17 +105,8 @@ export function Hero3D() {
                         transition={{ delay: 0.1, duration: 0.5 }}
                         className="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-subtle mb-8"
                     >
-                        <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
-                        </span>
-                        <span className="text-sm text-muted-foreground">
-                            Available for new projects
-                        </span>
-                        <span className="text-gray-300">•</span>
-                        <span className="flex items-center gap-1 text-sm text-muted-foreground">
-                            <MapPin size={12} />
-                            Malaysia
+                        <span className="text-sm font-mono text-muted-foreground uppercase tracking-widest">
+                            Mansoor Hasan Ali Shokal
                         </span>
                     </motion.div>
 

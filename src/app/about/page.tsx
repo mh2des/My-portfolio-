@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-    MapPin,
     GraduationCap,
     Download,
     Terminal,
@@ -94,12 +93,6 @@ export default function AboutPage() {
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-transparent to-transparent" />
-                            <div className="absolute bottom-6 left-6 right-6">
-                                <div className="flex items-center gap-2 text-foreground/90 text-sm font-medium bg-white/60 backdrop-blur-md px-3 py-1.5 rounded-full w-fit">
-                                    <MapPin size={14} className="text-foreground" />
-                                    <span>Available for Work</span>
-                                </div>
-                            </div>
                         </motion.div>
 
                         {/* 3. Tech Stack - Wide */}
